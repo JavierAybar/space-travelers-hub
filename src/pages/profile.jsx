@@ -9,57 +9,54 @@ import {
 } from '../redux/rockets/rockets-slice';
 import MissionsProfile from '../components/MissionsProfile/MissionsProfile';
 
-const ProfilePage = () => {
+function ProfilePage() {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(filterReservedRockets());
   }, [dispatch]);
 
-  const handleCancelRocket = (id) => {
+  function handleCancelRocket(id) {
     dispatch(cancelRocket(id));
-  };
+  }
 
   const { filteredRockets } = useSelector((state) => state.rockets);
 
   return (
-    <Row style={{ width: '42%' }}>
-      <Col>
-        <h2>My Rockets</h2>
-        <ListGroup>
-          {filteredRockets.length > 0 ? (
-            filteredRockets.map(({ id, name }) => (
-              <ListGroup.Item
-                style={{ padding: '15px', borderRadius: '6px' }}
-                key={id}
-                className="d-flex justify-content-between align-items-center"
-              >
-                <span>{name}</span>
-                <Button
-                  variant="outline-danger"
-                  onClick={() => handleCancelRocket(id)}
-                  className="ms-3"
-                >
-                  Cancel Reservation
-                </Button>
-              </ListGroup.Item>
-            ))
+    React.createElement(Row, { style: { width: '42%' } },
+      React.createElement(Col, null,
+        React.createElement('h2', null, 'My Rockets'),
+        React.createElement(ListGroup, null,
+          filteredRockets.length > 0 ? (
+            filteredRockets.map((_ref) => {
+              const { id } = _ref; const
+                { name } = _ref;
+              return (
+                React.createElement(ListGroup.Item, {
+                  style: { padding: '15px', borderRadius: '6px' },
+                  key: id,
+                  className: 'd-flex justify-content-between align-items-center',
+                },
+                React.createElement('span', null, name),
+                React.createElement(Button, {
+                  variant: 'outline-danger',
+                  onClick() { return handleCancelRocket(id); },
+                  className: 'ms-3',
+                },
+                'Cancel Reservation')));
+            })
           ) : (
-            <ListGroup.Item className="text-center">
-              You haven&apos;t reserved any rockets yet.
-            </ListGroup.Item>
-          )}
-        </ListGroup>
-      </Col>
-    </Row>
+            React.createElement(ListGroup.Item, { className: 'text-center' },
+              "You haven't reserved any rockets yet.")
+          ))))
   );
-};
+}
 
-const Profile = () => (
-  <section style={{ display: 'flex', justifyContent: 'space-between' }}>
-    <ProfilePage />
-    <MissionsProfile />
-  </section>
-);
-
+function Profile() {
+  return (
+    React.createElement('section', { style: { display: 'flex', justifyContent: 'space-between' } },
+      React.createElement(ProfilePage, null),
+      React.createElement(MissionsProfile, null))
+  );
+}
 export default Profile;

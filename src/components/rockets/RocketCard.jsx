@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { reserveRocket, cancelRocket } from '../../redux/rockets/rockets-slice';
 
-const RocketCard = ({ rocketProps }) => {
+function RocketCard({ rocketProps }) {
   const dispatch = useDispatch();
   const {
     id, name, description, flickrImages, reserved,
@@ -51,7 +51,7 @@ const RocketCard = ({ rocketProps }) => {
       </div>
     </Card>
   );
-};
+}
 
 RocketCard.defaultProps = {
   rocketProps: {},

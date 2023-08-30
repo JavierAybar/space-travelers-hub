@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
 import { leaveMission } from '../../redux/missions/missions-slice';
 
-const MissionsProfile = () => {
+function MissionsProfile() {
   const { missions } = useSelector((state) => state.missions);
 
   const filteredMissions = missions.filter((mission) => mission.reserved);
@@ -40,6 +40,6 @@ const MissionsProfile = () => {
       )}
     </ListGroup>
   );
-};
+}
 
 export default MissionsProfile;

@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getMissions, joinMission, leaveMission } from '../../redux/missions/missions-slice';
 import './TableMissions.css';
 
-const TableMissions = () => {
+function TableMissions() {
   const dispatch = useDispatch();
   const { missions } = useSelector((state) => state.missions);
 
@@ -52,6 +52,6 @@ const TableMissions = () => {
       </tbody>
     </Table>
   );
-};
+}
 
 export default TableMissions;
