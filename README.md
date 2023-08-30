@@ -73,7 +73,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://space-travelers-hub-react.onrender.com)
+- [Live Demo Link]([https://space-travelers-hub-react.onrender.com](https://space-x-travelers-1ef804.netlify.app/))
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> 
 
