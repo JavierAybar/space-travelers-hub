@@ -23,13 +23,14 @@ function ProfilePage() {
   const { filteredRockets } = useSelector((state) => state.rockets);
 
   return (
-    <Row>
+    <Row style={{ width: '42%' }}>
       <Col>
         <h2>My Rockets</h2>
         <ListGroup>
           {filteredRockets.length > 0 ? (
             filteredRockets.map(({ id, name }) => (
               <ListGroup.Item
+                style={{ padding: '15px', borderRadius: '6px' }}
                 key={id}
                 className="d-flex justify-content-between align-items-center"
               >
