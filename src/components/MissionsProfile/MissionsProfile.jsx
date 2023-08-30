@@ -33,7 +33,7 @@ const MissionsProfile = () => {
           </ListGroup.Item>
         ))
       ) : (
-        <ListGroup.Item style={{ borderRadius: '6px' }}>
+        <ListGroup.Item className="text-center" style={{ borderRadius: '6px' }}>
           You haven&apos;t joined the missions yet
 
         </ListGroup.Item>
