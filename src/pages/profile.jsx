@@ -16,47 +16,49 @@ function ProfilePage() {
     dispatch(filterReservedRockets());
   }, [dispatch]);
 
-  function handleCancelRocket(id) {
+  const handleCancelRocket = (id) => {
     dispatch(cancelRocket(id));
-  }
+  };
 
   const { filteredRockets } = useSelector((state) => state.rockets);
 
   return (
-    React.createElement(Row, { style: { width: '42%' } },
-      React.createElement(Col, null,
-        React.createElement('h2', null, 'My Rockets'),
-        React.createElement(ListGroup, null,
-          filteredRockets.length > 0 ? (
-            filteredRockets.map((_ref) => {
-              const { id } = _ref; const
-                { name } = _ref;
-              return (
-                React.createElement(ListGroup.Item, {
-                  style: { padding: '15px', borderRadius: '6px' },
-                  key: id,
-                  className: 'd-flex justify-content-between align-items-center',
-                },
-                React.createElement('span', null, name),
-                React.createElement(Button, {
-                  variant: 'outline-danger',
-                  onClick() { return handleCancelRocket(id); },
-                  className: 'ms-3',
-                },
-                'Cancel Reservation')));
-            })
+    <Row>
+      <Col>
+        <h2>My Rockets</h2>
+        <ListGroup>
+          {filteredRockets.length > 0 ? (
+            filteredRockets.map(({ id, name }) => (
+              <ListGroup.Item
+                key={id}
+                className="d-flex justify-content-between align-items-center"
+              >
+                <span>{name}</span>
+                <Button
+                  variant="outline-danger"
+                  onClick={() => handleCancelRocket(id)}
+                  className="ms-3"
+                >
+                  Cancel Reservation
+                </Button>
+              </ListGroup.Item>
+            ))
           ) : (
-            React.createElement(ListGroup.Item, { className: 'text-center' },
-              "You haven't reserved any rockets yet.")
-          ))))
+            <ListGroup.Item className="text-center">
+              You haven&apos;t reserved any rockets yet.
+            </ListGroup.Item>
+          )}
+        </ListGroup>
+      </Col>
+    </Row>
   );
 }
 
-function Profile() {
-  return (
-    React.createElement('section', { style: { display: 'flex', justifyContent: 'space-between' } },
-      React.createElement(ProfilePage, null),
-      React.createElement(MissionsProfile, null))
-  );
-}
+const Profile = () => (
+  <section style={{ display: 'flex', justifyContent: 'space-between' }}>
+    <ProfilePage />
+    <MissionsProfile />
+  </section>
+);
+
 export default Profile;
