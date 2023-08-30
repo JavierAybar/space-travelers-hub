@@ -21,9 +21,6 @@
     - [Run tests](#run-tests)
   - [👥 Author ](#-author-)
   - [🔭 Future Features ](#-future-features-)
-  - [🤝 Contributing ](#-contributing-)
-  - [⭐️ Show your support ](#️-show-your-support-)
-  - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
@@ -167,35 +164,6 @@ To run tests, run the following command:
 - User Profiles and Data Storage: Allow users to create accounts, customize profiles, store their booking history, mission participations, and personal preferences.
 
 - Immersive Interactive UI: Create an immersive user interface that combines real-time updates with interactive elements. Utilize animations, dynamic transitions, and user-friendly interfaces to make users feel connected to the space exploration experience.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-
-## 🤝 Contributing <a name="contributing"></a>
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- SUPPORT -->
-
-## ⭐️ Show your support <a name="support"></a>
-
-
-Give a ⭐️ if you like this project!
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-
-- Thanks to all Microverse community
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
